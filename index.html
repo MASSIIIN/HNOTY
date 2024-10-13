@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>حانوتي</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>مرحبا بك في حانوتي</h1>
+        <div class="button-group">
+            <button id="customerBtn">دخول كزبون</button>
+            <button id="merchantBtn">دخول كتاجر</button>
+        </div>
+        <button id="profileBtn" class="hidden">ملفي الشخصي</button>
+    </div>
+
+    <div id="customerLogin" class="hidden">
+        <h2>تسجيل دخول الزبون</h2>
+        <input type="text" id="customerName" placeholder="الاسم" required>
+        <input type="text" id="customerSurname" placeholder="اللقب" required>
+        <button id="loginCustomer">تسجيل الدخول</button>
+    </div>
+
+    <div id="merchantLogin" class="hidden">
+        <h2>تسجيل دخول التاجر</h2>
+        <input type="text" id="merchantName" placeholder="الاسم" required>
+        <input type="password" id="merchantPassword" placeholder="كلمة المرور" required>
+        <button id="loginMerchant">تسجيل الدخول</button>
+    </div>
+
+    <div id="merchantDashboard" class="hidden">
+        <h2>لوحة تحكم التاجر</h2>
+        <p>عدد المبيعات المكتملة: <span id="completedSales">0</span></p>
+        <button id="addProductBtn">إضافة سلعة</button>
+    </div>
+
+    <div id="addProductPage" class="hidden">
+        <h2>إضافة منتج جديد</h2>
+        <input type="text" id="productName" placeholder="اسم المنتج" required>
+        <textarea id="productDescription" placeholder="وصف المنتج" required></textarea>
+        <input type="file" id="productImage" accept="image/*" required>
+        <button id="submitProduct">إضافة المنتج</button>
+    </div>
+
+    <div id="storePage" class="hidden">
+        <h2>اختيار المحل</h2>
+        <ul id="storeList"></ul>
+    </div>
+
+    <div id="productPage" class="hidden">
+        <h2>المنتجات</h2>
+        <ul id="productList"></ul>
+    </div>
+
+    <div id="cartPage" class="hidden">
+        <h2>سلة المنتجات</h2>
+        <ul id="cartList"></ul>
+        <input type="text" id="address" placeholder="العنوان بالكامل" required>
+        <button id="checkout">إتمام الشراء</button>
+    </div>
+
+    <div id="profilePage" class="hidden">
+        <h2>الملف الشخصي</h2>
+        <p>الاسم: <span id="profileName"></span></p>
+        <p>اللقب: <span id="profileSurname"></span></p>
+        <h3>السلع التي اشتريتها:</h3>
+        <ul id="purchasedItems"></ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+<div id="cartPage" class="hidden">
+    <h2>سلة المنتجات</h2>
+    <ul id="cartList"></ul>
+    <input type="text" id="address" placeholder="العنوان بالكامل" required>
+    
+    <h3>طريقة الدفع:</h3>
+    <label>
+        <input type="radio" name="paymentMethod" value="cash" checked>
+        نقدًا
+    </label>
+    <label>
+        <input type="radio" name="paymentMethod" value="mobile">
+        عبر الهاتف
+    </label>
+
+    <button id="checkout">إتمام الشراء</button>
+</div>
